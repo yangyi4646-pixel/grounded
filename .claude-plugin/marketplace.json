@@ -1,0 +1,21 @@
+{
+  "name": "gds-agent-plugins",
+  "owner": { "name": "Yangyi" },
+  "metadata": {
+    "description": "A two-skill pipeline for turning thin requirements into spec, and frozen specs into front-end code — anchored to your existing product instead of inventing new UX."
+  },
+  "plugins": [
+    {
+      "name": "prd-to-spec",
+      "source": "./plugins/prd-to-spec",
+      "category": "development",
+      "description": "Distill a thin requirement / PRD into an executable SPEC, anchored to existing pages, fields, routes and components — no invented interactions."
+    },
+    {
+      "name": "spec-to-code",
+      "source": "./plugins/spec-to-code",
+      "category": "development",
+      "description": "Turn a frozen SPEC into front-end code that reuses the host product's visual grammar, routing and component conventions."
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "name": "spec-to-code",
+  "description": "Turn a frozen SPEC into front-end code that reuses the host product's visual grammar, routing and component conventions.",
+  "version": "1.0.0",
+  "author": { "name": "Yangyi" }
+}

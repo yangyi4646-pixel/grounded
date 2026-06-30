@@ -1,0 +1,6 @@
+{
+  "name": "prd-to-spec",
+  "description": "Distill a thin requirement / PRD into an executable SPEC, anchored to existing pages, fields, routes and components — no invented interactions.",
+  "version": "1.0.0",
+  "author": { "name": "Yangyi" }
+}
