@@ -14,6 +14,7 @@ description: >-
 ## 铁律
 
 ```text
+NO REUSE OR SYSTEM-CAPABILITY DEFAULT WITHOUT AN ESTABLISHED PRODUCT CODEBASE.
 NO FROZEN SPEC FACT WITHOUT SOURCE, CODE EVIDENCE, OR USER CONFIRMATION.
 NO SCOPE EXPANSION WITHOUT SCOPE BOUNDARY.
 NO APPROVAL/LIFECYCLE DEFAULT WITHOUT AN OPERATION GATE.
@@ -23,10 +24,11 @@ NO FULL SPEC GENERATION PAST A P0 CONFIRMATION BLOCKER.
 
 ## 默认路径
 
+0. **确立锚定产品**:先确认这个需求落在哪个现有产品/代码仓。已知(当前工作目录即该仓,或用户已指定路径)→ 声明后继续。需求明显要复用现有产品的页面/字段/能力,但代码仓未确立或在当前仓找不到 → 停,先请用户指定本地项目(给路径);确属无现有产品可锚的全新概念 → 用 `templates/no-code-evidence.md` 显式降级,不静默臆造现有能力。
 1. **分档**:先判 XS/S/M/L;不确定升一档,但不得把小需求无理由拖进完整矩阵。
 2. **读源**:读取 PRD/纪要/聊天决策/已有 SPEC。薄输入先落 `source/intent.md` 或等价意图记录。
 3. **对账**:逐源标一致、互补、冲突、独有。PRD 明写的 IA、入口、对象归属优先冻结;源码便利性只能写实现候选。
-4. **必要 recon**:只有当默认依赖现有系统能力时才扫描代码;无代码或早期概念用 `templates/no-code-evidence.md` 明确降级。
+4. **必要 recon**:只有当默认依赖现有系统能力时才扫描代码;无代码或早期概念(须先过第 0 步确认确无现有产品可锚)用 `templates/no-code-evidence.md` 明确降级。
 5. **抽骨架**:XS 写影响判断;S 写 mini-spec;M/L 用 `references/spec-template.md` 起 §0、Scope Boundary、单元索引和各单元。
 6. **触发式读 reference**:只读取下方路由表命中的文件,不要把所有规则一次性展开。凡路由命中 `templates/*` + `scripts/check_*.py` 的 gate,必须复制模板标题/表头并运行脚本;不得只用散文转述。
 7. **确认门**:P0 停止完整 SPEC;P1 写确认截止点;P2 进 Later/backlog。确认后才回填实体契约。
@@ -47,6 +49,7 @@ NO FULL SPEC GENERATION PAST A P0 CONFIRMATION BLOCKER.
 
 | 触发 | 读取/使用 |
 | --- | --- |
+| 起手不确定需求落在哪个产品/代码仓,或要复用现有产品但仓库未确立 | 停 + 请用户指定本地项目路径(见默认路径第 0 步) |
 | 新项目无 specs 约定 | `references/bootstrap.md` |
 | 默认依赖现有系统能力 | `references/evidence-profile.md`;若没有代码证据用 `templates/no-code-evidence.md` |
 | BI/数据产品薄输入 | `references/profiles/bi-product.md` |
