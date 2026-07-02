@@ -11,6 +11,7 @@ TIERS = [
     "Implementation complete",
     "Local validation complete",
     "Visual alignment complete",
+    "Usability walkthrough complete",
     "Design-side release complete",
 ]
 

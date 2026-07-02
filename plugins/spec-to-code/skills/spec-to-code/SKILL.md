@@ -76,7 +76,7 @@ NO IMPLEMENTATION OF AFFECTED UNITS WITH UNCONFIRMED P0/P1 CONTRACT GAPS.
 - 必须报告实现边界表、复用清单、视觉契约、验证结果、unchecked 项和原因。
 - 触发审批/生命周期、多对象结构、视觉证明时,必须报告对应 gate 结果;未触发也要写 N/A + 原因。
 - SPEC-code contract diff 必须覆盖 ids、枚举、存储键、对象归属、路由/用户路径、Scope Boundary 和 SPEC 冻结的视觉契约项。
-- 完成层级只能是:implementation complete / local validation complete / visual alignment complete / design-side release complete。
+- 完成层级只能是:implementation complete / local validation complete / visual alignment complete / usability walkthrough complete / design-side release complete。
 
 ## 禁止的捷径
 

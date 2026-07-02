@@ -54,7 +54,7 @@ NO FULL SPEC GENERATION PAST A P0 CONFIRMATION BLOCKER.
 | 默认依赖现有系统能力 | `references/evidence-profile.md`;若没有代码证据用 `templates/no-code-evidence.md` |
 | BI/数据产品薄输入 | `references/profiles/bi-product.md` |
 | M/L 完整规格 | `references/spec-template.md`, `references/gap-checklist.md` |
-| 需要确认或降阶拆问 | `references/clarify-loop.md`, `templates/confirmation-question.md` |
+| 需要确认或降阶拆问、约束/选择类需求(★3b / #11)浮确认 | `references/clarify-loop.md`, `templates/confirmation-question.md` |
 | P0 硬确认 | `templates/p0-confirmation-request.md`, `scripts/check_stop_on_p0_confirmation.py` |
 | P1/P2 分级 | `scripts/check_confirmation_gap_levels.py` |
 | 审批、发布、下线、删除、版本、消费读取 | `references/approval-lifecycle.md`, `templates/approval-lifecycle-gate.md`, `scripts/check_approval_lifecycle_gate.py` |
